@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flower</title>
+</head>
+<body>
+
+  <div class="text-container">
+    <h1>De: Tu cachorro</h1>
+    <h2><br><br>Para: La novia mas hermosa del mundo</h2>
+  </div>
+  </div>
+
+<div class="flower-container">
+  <!-- Deja un solo elemento de flor aquí, que se clonará en JavaScript -->
+  <div class="flower">
+      <div class="mid">
+      </div>
+      <div class="Petal1 p1">
+      </div>
+      <div class="Petal1 p2">
+      </div>
+      <div class="Petal1 p3">
+      </div>
+      <div class="Petal1 p4">
+      </div>
+      <div class="Petal2 p1">
+      </div>
+      <div class="Petal2 p2">
+      </div>
+      <div class="Petal2 p3">
+      </div>
+      <div class="Petal2 p4">
+      </div>
+      <div class="Petal3 p1">
+      </div>
+      <div class="Petal3 p2">
+      </div>
+      <div class="Petal3 p3">
+      </div>
+      <div class="Petal3 p4">
+      </div>
+  </div>
+</div>
+
+
+
+<script>
+  // Obtén el elemento de flor que deseas clonar
+  const originalFlower = document.querySelector('.flower');
+
+  // Crea un ciclo para agregar 100 flores al documento
+  for (let i = 0; i < 1000; i++) {
+    // Clona el elemento original de la flor
+    const clonedFlower = originalFlower.cloneNode(true);
+    
+    // Agrega la flor clonada al contenedor
+    document.querySelector('.flower-container').appendChild(clonedFlower);
+  }
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const flowerContainer = document.querySelector(".flower-container");
+
+  for (let i = 0; i < 100; i++) {
+    const flower = document.createElement("div");
+    flower.classList.add("flower");
+
+    setTimeout(() => {
+      flowerContainer.appendChild(flower);
+    }, i * 200);
+  }
+});
+
+</script>
+</body>
+</html>
+
+
